@@ -1,1 +1,10 @@
-<h2>Index View from Books</h2>
+<h2>Our Books:</h2>
+
+<ul>
+  <% @books.each do |book| %>
+    <li><strong><%= link_to book.title, book_path(book) %></strong></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add Book', new_book_path %>
+
