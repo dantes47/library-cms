@@ -1,0 +1,7 @@
+<%= simple_form_for @book do |fld| %>
+  <%= fld.input :title, label: 'Book Title' %>
+  <%= fld.input :description %>
+  <%= fld.input :author %>
+
+  <%= fld.button :submit %>
+<% end %>
