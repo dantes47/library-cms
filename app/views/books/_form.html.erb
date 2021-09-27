@@ -1,8 +1,14 @@
 <%= simple_form_for @book do |fld| %>
+  <%= select_tag(
+    :category_id, options_for_select(@categories),
+    prompt: 'Category..?'
+  ) %>
+  <hr>
+
   <%= fld.input :title, label: 'Book Title', placeholder: 'Title of your book..' %>
   <%= fld.input :description, placeholder: 'Short description about your book..' %>
   <%= fld.input :author, placeholder: 'Author' %>
-  <%= fld.input :coauthor, placeholder: 'Co-Author' %>
+  <%= fld.input :coauthor, placeholder: 'Co-Author(If exists..)' %>
 
   <%= fld.button :submit %>
 <% end %>
