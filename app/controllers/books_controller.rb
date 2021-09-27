@@ -11,11 +11,11 @@ class BooksController < ApplicationController
   def show; end
 
   def new
-    @book = Book.new
+    @book = current_user.books.build
   end
 
   def create
-    @book = Book.new(prms)
+    @book = current_user.books.build(prms)
 
     if @book.save
       redirect_to root_path

@@ -1,9 +1,15 @@
 <h2><%= @book.title %></h2>
 <h3><%= @book.description %></h3>
 <h4><%= @book.author %></h4>
-
+<h4><%= @book.coauthor %></h4>
 
 <%= link_to 'Back', root_path %>
-<%= link_to 'Edit', edit_book_path(@book) %><hr>
 
-<%= button_to 'Delete', book_path(@book), confirm: 'Are You Sure..?', method: :delete %>
+<% if user_signed_in? %>
+  <% if @book.user_id.eql?(current_user.id) %>
+
+    <%= link_to 'Edit', edit_book_path(@book) %><hr>
+    <%= button_to 'Delete', book_path(@book), confirm: 'Are You Sure..?', method: :delete %>
+
+  <% end %>
+<% end %>
