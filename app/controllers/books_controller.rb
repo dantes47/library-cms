@@ -2,7 +2,7 @@
 
 # Books Controller
 class BooksController < ApplicationController
-  before_action :finder, only: %i[show edit update destroy]
+  before_action :find_book, only: %i[show edit update destroy]
 
   def index
     @books = Book.all.order('created_at DESC')
@@ -35,7 +35,6 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id])
     @book.destroy
 
     redirect_to root_path
@@ -47,7 +46,7 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :description, :author)
   end
 
-  def finder
+  def find_book
     @book = Book.find(params[:id])
   end
 end
