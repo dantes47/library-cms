@@ -1,7 +1,8 @@
 <h2><%= @book.title %></h2>
-<h3><%= @book.description %></h3>
-<h4><%= @book.author %></h4>
-<h4><%= @book.coauthor %></h4>
+<h3><%= @book.author %></h3>
+<h3><%= @book.coauthor %></h3>
+<h3>|| <%= @book.category.name %></h3>
+<p><%= @book.description %></p>
 
 <%= link_to 'Back', root_path %>
 

@@ -1,4 +1,4 @@
-<%= simple_form_for @book do |fld| %>
+<%= simple_form_for @book, html: { multipart: true } do |fld| %>
   <%= select_tag(
     :category_id, options_for_select(@categories),
     prompt: 'Category..?'
