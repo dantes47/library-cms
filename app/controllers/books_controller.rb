@@ -31,8 +31,6 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book.category_id = params[:category_id]
-
     if @book.update(prms)
       redirect_to book_path(@book)
     else
@@ -51,7 +49,7 @@ class BooksController < ApplicationController
   def prms
     params.require(:book).permit(
       :title, :description, :author,
-      :coauthor, :category
+      :coauthor, :category, :category_id
     )
   end
 
