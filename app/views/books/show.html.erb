@@ -10,7 +10,7 @@
   <% if @book.user_id.eql?(current_user.id) %>
 
     <%= link_to 'Edit', edit_book_path(@book) %><hr>
-    <%= button_to 'Delete', book_path(@book), confirm: 'Are You Sure..?', method: :delete %>
+    <%= link_to 'Delete', book_path(@book), data: { confirm: 'Are You Sure..?' }, method: :delete %>
 
   <% end %>
 <% end %>
