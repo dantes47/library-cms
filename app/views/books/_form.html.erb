@@ -2,8 +2,9 @@
   <%= select_tag(
     :category_id, options_for_select(@categories),
     prompt: 'Category..?'
-  ) %>
-  <hr>
+  ) %><hr>
+  <%= fld.file_field :book_img %>
+  <br>
 
   <%= fld.input :title, label: 'Book Title', placeholder: 'Title of your book..' %>
   <%= fld.input :description, placeholder: 'Short description about your book..' %>

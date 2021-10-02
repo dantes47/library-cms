@@ -53,8 +53,8 @@ class BooksController < ApplicationController
 
   def prms
     params.require(:book).permit(
-      :title, :description, :author,
-      :coauthor, :category, :category_id
+      :title, :description, :author, :coauthor,
+      :category, :category_id, :book_img
     )
   end
 

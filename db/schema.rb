@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_929_191_032) do
+ActiveRecord::Schema.define(version: 20_211_002_193_949) do
   create_table 'active_admin_comments', charset: 'utf8mb4', force: :cascade do |t|
     t.string 'namespace'
     t.text 'body'
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(version: 20_210_929_191_032) do
     t.datetime 'updated_at', precision: 6, null: false
     t.integer 'user_id'
     t.integer 'category_id'
+    t.string 'book_img_file_name'
+    t.string 'book_img_content_type'
+    t.bigint 'book_img_file_size'
+    t.datetime 'book_img_updated_at'
   end
 
   create_table 'categories', charset: 'utf8mb4', force: :cascade do |t|
