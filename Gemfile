@@ -5,16 +5,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.5'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+gem 'mysql2', '~> 0.5'
+gem 'puma', '~> 5.0'
+gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
+gem 'sass-rails', '>= 6'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'image_processing', '~> 1.2'
@@ -37,6 +32,8 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rubocop', '~> 1.22'
+  gem 'rubocop-rails', '~> 2.12'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
