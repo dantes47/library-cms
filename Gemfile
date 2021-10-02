@@ -27,6 +27,7 @@ gem 'turbolinks'
 gem 'activeadmin', '~> 2.9'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8'
+gem 'paperclip', '~> 6.1'
 gem 'simple_form', '~> 5.1'
 
 group :development, :test do
@@ -47,5 +48,3 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
-gem 'paperclip', '~> 6.1'
