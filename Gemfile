@@ -33,7 +33,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'rubocop', '~> 1.22'
-  gem 'rubocop-rails', '~> 2.12'
+  gem 'rubocop-rails', '~> 2.12', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
 end
