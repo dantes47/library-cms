@@ -1,0 +1,11 @@
+<div class="review-rating" data-score="<%= review.rating %>"></div>
+<p><%= review.comment %></p>
+
+<% if user_signed_in? %>
+  <% if review.user_id.eql?(current_user.id) %>
+
+    <%= link_to 'Edit', edit_book_review_path(review.book, review) %>
+    <%= link_to 'Delete', book_review_path(review.book, review), data: { confirm: "Are You Sure..?" }, method: :delete %>
+
+  <% end %>
+<% end %>

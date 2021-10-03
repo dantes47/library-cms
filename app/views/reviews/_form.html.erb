@@ -1,0 +1,5 @@
+<%= simple_form_for([@book, @book.reviews.build]) do |fld| %>
+  <%= fld.input :rating %>
+  <%= fld.input :comment %>
+  <%= fld.button :submit %>
+<% end %>

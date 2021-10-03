@@ -1,0 +1,7 @@
+<h2>Edit Review</h2>
+
+<%= simple_form_for([@book, @review]) do |fld| %>
+  <%= fld.input :rating %>
+  <%= fld.input :comment %>
+  <%= fld.button :submit %>
+<% end %>
