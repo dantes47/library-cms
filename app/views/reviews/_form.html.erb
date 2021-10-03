@@ -1,5 +1,17 @@
 <%= simple_form_for([@book, @book.reviews.build]) do |fld| %>
-  <%= fld.input :rating %>
+
+<div id="rating-form">
+  <div>Rate Me!</div>
+</div>
+
   <%= fld.input :comment %>
   <%= fld.button :submit %>
+
 <% end %>
+
+<script>
+  $('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  })
+</script>
