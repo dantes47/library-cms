@@ -2,12 +2,12 @@
 
 <%= simple_form_for @book, html: { multipart: true } do |fld| %>
   <%= fld.select :category_id, @categories %>
-  <hr>
+
   <%= fld.file_field :book_img %>
-  <br>
+
   <%= fld.input :title, label: 'Book Title' %>
   <%= fld.input :description %>
   <%= fld.input :author %>
-  
+
   <%= fld.button :submit %>
 <% end %>
