@@ -1,6 +1,6 @@
 <h2 class="current-category"><%= params[:category] %></h2>
 
-<% if @books.count.zero? %>
+<% if @books.count.eql?(0) %>
   <h2 class="book">There's no Books in this Category, for now..)</h2>
 <% else %>
 
