@@ -53,5 +53,5 @@ test:
 production:
   <<: *default
   database: library_cms_production
-  username: library_cms
+  username: <%= ENV['NAME'] %>
   password: <%= ENV['LIBRARY_CMS_DATABASE_PASSWORD'] %>
