@@ -1,15 +1,19 @@
-<h2>Edit Review</h2>
+<div class="col-md-6 col-md-offset-3">
+  <div class="edit-book-form">
+    <h2>Edit Review</h2>
 
-<%= simple_form_for([@book, @review]) do |fld| %>
+    <%= simple_form_for([@book, @review]) do |fld| %>
 
-  <div id="rating-form">
-    <div>Rate Me!</div>
+    <div id="rating-form">
+      <div>Rate Me!</div>
+    </div>
+
+      <%= fld.input :comment %>
+      <%= fld.button :submit, class: "btn-custom2" %>
+
+    <% end %>
   </div>
-
-  <%= fld.input :comment %>
-  <%= fld.button :submit %>
-
-<% end %>
+</div>
 
 <script>
   $('#rating-form').raty({
