@@ -3,6 +3,9 @@ require: rubocop-rails
 Documentation:
   Enabled: false
 
+Rails/BulkChangeTable:
+  Enabled: false
+
 Metrics/LineLength:
   Max: 200
 
